@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <EditText
+        android:id="@+id/homeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home Value"
+        android:textColor="@android:color/secondary_text_light"
+        android:inputType="none"
+        android:textIsSelectable="true"
+        android:textStyle="bold"
+        android:background="@android:color/transparent"
+        android:width="100dp"
+        android:layout_marginLeft="5sp"
+        android:layout_marginTop="10sp" />
+
+    <EditText
+        android:id="@+id/homeValueInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Required"
+        android:textColor="@android:color/secondary_text_light"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:enabled="true"
+        android:width="180sp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/homeValue"
+        android:layout_marginLeft="5sp" />
+
+    <TextView
+        android:id="@+id/homeValueUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/darker_gray"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="$"
+        android:width="50sp"
+        android:layout_toEndOf="@id/homeValueInput"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignBaseline="@+id/homeValueInput"
+        android:textStyle="bold" />
+
+
+
+
+    <EditText
+        android:id="@+id/downPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Down Pay"
+        android:textColor="@android:color/secondary_text_light"
+        android:inputType="none"
+        android:textIsSelectable="true"
+        android:textStyle="bold"
+        android:background="@android:color/transparent"
+        android:width="150sp"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignStart="@id/homeValue"
+        android:layout_alignEnd="@id/homeValue"
+        android:layout_below="@+id/homeValue"
+        android:layout_marginTop="20sp" />
+
+    <EditText
+        android:id="@+id/downPayInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/secondary_text_light"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:enabled="true"
+        android:width="180sp"
+        android:layout_toEndOf="@id/downPay"
+        android:layout_marginLeft="5sp"
+        android:layout_alignParentTop="false"
+        android:layout_alignBaseline="@+id/downPay"
+        android:hint="0 by default" />
+
+
+
+
+    <EditText
+        android:id="@+id/interestRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Interest Rate"
+        android:textColor="@android:color/secondary_text_light"
+        android:inputType="none"
+        android:textIsSelectable="true"
+        android:textStyle="bold"
+        android:background="@android:color/transparent"
+        android:layout_alignStart="@id/downPay"
+        android:layout_below="@+id/downPay"
+        android:layout_marginTop="20sp"
+        android:layout_alignEnd="@id/downPay" />
+
+    <EditText
+        android:id="@+id/interestRateInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Required"
+        android:textColor="@android:color/secondary_text_light"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:enabled="true"
+        android:width="180sp"
+        android:layout_alignBaseline="@+id/interestRate"
+        android:layout_toEndOf="@id/interestRate"
+        android:layout_marginLeft="5sp" />
+
+
+
+
+    <EditText
+        android:id="@+id/terms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/secondary_text_light"
+        android:text="# of Terms"
+        android:inputType="none"
+        android:textIsSelectable="true"
+        android:textStyle="bold"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="20sp"
+        android:layout_below="@+id/interestRate"
+        android:layout_alignStart="@id/interestRate"
+        android:layout_alignEnd="@id/interestRate" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/interestRate"
+        android:layout_toEndOf="@id/terms"
+        android:layout_alignTop="@id/terms"
+        android:layout_alignBottom="@id/terms"
+        android:layout_alignStart="@+id/interestRateInput"
+        android:layout_alignEnd="@+id/interestRateInput" />
+
+
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="120dp"
+        android:text="Reset"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_marginLeft="30sp"
+        android:layout_marginTop="20sp"
+        android:layout_below="@+id/taxRateInput" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:background="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_toEndOf="@id/resetButton"
+        android:layout_marginLeft="40sp"
+        android:layout_alignTop="@+id/resetButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="$"
+        android:textColor="@android:color/darker_gray"
+        android:id="@+id/textView2"
+        android:width="50sp"
+        android:layout_alignBaseline="@+id/downPayInput"
+        android:layout_toEndOf="@id/downPayInput"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="%"
+        android:textColor="@android:color/darker_gray"
+        android:id="@+id/textView3"
+        android:layout_toEndOf="@id/interestRateInput"
+        android:layout_alignBaseline="@+id/interestRateInput"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Yrs"
+        android:textColor="@android:color/darker_gray"
+        android:id="@+id/textView4"
+        android:width="50sp"
+        android:layout_alignParentEnd="false"
+        android:layout_toEndOf="@id/spinner"
+        android:layout_alignBaseline="@+id/spinner"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/taxRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tax Rate"
+        android:textColor="@android:color/secondary_text_light"
+        android:inputType="none"
+        android:textIsSelectable="true"
+        android:textStyle="bold"
+        android:background="@android:color/transparent"
+        android:layout_alignStart="@id/terms"
+        android:layout_marginTop="20sp"
+        android:layout_alignEnd="@id/terms"
+        android:layout_below="@+id/terms" />
+
+    <EditText
+        android:id="@+id/taxRateInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Required"
+        android:textColor="@android:color/secondary_text_light"
+        android:inputType="number"
+        android:ems="10"
+        android:enabled="true"
+        android:width="180sp"
+        android:layout_below="@+id/spinner"
+        android:layout_toStartOf="@+id/textView4"
+        android:layout_alignBaseline="@+id/taxRate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="%"
+        android:textColor="@android:color/darker_gray"
+        android:id="@+id/textView"
+        android:width="50sp"
+        android:layout_toEndOf="@id/taxRateInput"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@+id/taxRateInput" />
+
+</RelativeLayout>
