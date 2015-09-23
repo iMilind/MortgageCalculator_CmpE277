@@ -29,11 +29,11 @@ public class MortgageActivity extends Activity implements InputFragment.InputFra
 
     private void calculate (HashMap <String, String>loanInfo) {
 
-        float homeValue = Float.parseFloat(loanInfo.get("homeValue").toString());
-        float downPay = Float.parseFloat(loanInfo.get("downPay").toString());
-        float interestRate = Float.parseFloat(loanInfo.get("interestRate").toString());
-        float terms = Float.parseFloat(loanInfo.get("terms").toString());
-        float taxRate = Float.parseFloat(loanInfo.get("taxRate").toString());
+        Double homeValue = Double.parseDouble(loanInfo.get("homeValue").toString());
+        Double downPay = Double.parseDouble(loanInfo.get("downPay").toString());
+        Double interestRate = Double.parseDouble(loanInfo.get("interestRate").toString());
+        Double terms = Double.parseDouble(loanInfo.get("terms").toString());
+        Double taxRate = Double.parseDouble(loanInfo.get("taxRate").toString());
 
         String payOffDate = getPayOffDate(Integer.parseInt(loanInfo.get("terms").toString()));
 
