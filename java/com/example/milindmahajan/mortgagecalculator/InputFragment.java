@@ -183,14 +183,14 @@ public class InputFragment extends Fragment {
     private boolean isValidForCalculation() {
 
         EditText homeValueEditText = (EditText) parentView.findViewById(R.id.homeValueInput);
-        if (homeValueEditText.getText().length() == 0) {
+        if (homeValueEditText.getText().length() == 0 || Integer.parseInt(homeValueEditText.getText().toString()) == 0) {
 
             delegate.invalidInput("Enter price for house");
             return false;
         }
 
         EditText interestRateEditText = (EditText) parentView.findViewById(R.id.interestRateInput);
-        if (interestRateEditText.getText().length() == 0) {
+        if (interestRateEditText.getText().length() == 0 || Integer.parseInt(interestRateEditText.getText().toString()) == 0) {
 
             delegate.invalidInput("Enter interest rate");
             return false;
@@ -204,7 +204,7 @@ public class InputFragment extends Fragment {
         }
 
         EditText taxRateEditText = (EditText) parentView.findViewById(R.id.taxRateInput);
-        if (taxRateEditText.getText().length() == 0) {
+        if (taxRateEditText.getText().length() == 0  || Integer.parseInt(taxRateEditText.getText().toString()) == 0) {
 
             delegate.invalidInput("Enter property tax");
             return false;
